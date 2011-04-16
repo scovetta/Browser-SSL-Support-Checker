@@ -1,0 +1,23 @@
+Browser SSL Support Checker
+
+The purpose of the Browser SSL Support Checker is to help users 
+determine which SSL protocols (SSLv2, SSLv3, TLSv1) and ciphers
+(from a long list) their web-browser supports.
+
+To start, run check.sh from a Linux (or Cygwin) environment. The
+script will start a number of OpenSSL processes, each listening
+on a different port, and will create an HTML file that includes
+IFrames to each process. 
+
+When loading that HTML file, the IFrames that point to an OpenSSL
+process that uses an unsupported cipher will cause an error and
+will not load. 
+
+JavaScript on the page will (does not currently) detect this and
+show a summary page. 
+
+--
+
+This project is looking for a host: If you have an Internet-accessible
+server and are willing to run the OpenSSL processes, please contact
+michael.scovetta [at] gmail {dot} com.
